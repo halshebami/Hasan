@@ -1,0 +1,66 @@
+# Java Chat Server and Client
+
+This repository contains a simple chat server and client implemented in Java. The server can handle multiple clients concurrently, and messages sent by a client are broadcasted to all other clients.
+
+## ChatServer
+
+The ChatServer class starts a server on port 12345 and waits for clients to connect. When a client connects, a new thread is started to handle the client's messages. The server maintains a map of all connected clients and their output streams.
+
+## ChatClient
+
+The `ChatClient` class connects to the server and starts a new thread for receiving messages. It also provides a method for sending messages to the server.
+
+## Usage
+
+1. Start the server:
+
+  bash
+java ChatServer
+
+
+The server will start and wait for clients to connect.
+
+2. Start the client:
+
+  bash
+java ChatClient
+
+
+The client will connect to the server and start receiving messages. You can type messages into the console to send them.
+
+## Example
+
+Here is an example of the server and two clients interacting:
+
+Server output:
+
+
+Server started on port 12345. Waiting for clients to connect...
+New client connected: User1
+New client connected: User2
+Received from client User1: Hello
+Received from client User2: Hi
+Received from client User1: How are you doing?
+Received from client User2: Good! ,and you?
+Received from client User1: Good!
+
+
+User1 Caht:
+
+
+Welcome to the chat room! Start typing your messages:
+Hello
+Hi
+How are you doing?
+Good! ,and you?
+Good!
+
+
+User2 Chat:
+
+Welcome to the chat room! Start typing your messages:
+Hello
+Hi
+How are you doing?
+Good! ,and you?
+Good!
